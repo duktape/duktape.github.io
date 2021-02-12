@@ -6,6 +6,8 @@
 	
 	<a-assets>
 		<img id="sky" src="images/stars.jpg" crossorigin="anonymous" />
+        <img id="dusty_lake" src="images/dusty_lake.jpg" crossorigin="anonymous" />
+        <img id="old_church" src="images/old_church.jpg" crossorigin="anonymous" />
 		<img id="grass" src="images/grass.jpg" crossorigin="anonymous" />
 		<img id="crate" src="images/crate.jpg" crossorigin="anonymous" />
 		<img id="earth" src="images/earth-sphere.jpg" crossorigin="anonymous" />
@@ -14,7 +16,7 @@
 		
 	<a-sky 
 		color = "#FFFFFF"
-		material = "src: #sky">
+		material = "src: #dusty_lake">
 	</a-sky>
 
 	<a-plane
@@ -50,7 +52,9 @@
 		position = " 1 0.75 -3"
 		color = "#8888BB"
 		material = "src: #hexagons; repeat: 4 2;"
-		shadow = "cast: true; receive: true">
+		shadow = "cast: true; receive: true"
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #old_church"
+        event-set__leave="_event: mouseleave; _target: a-sky; material.src: #dusty_lake"        >
 	</a-cylinder>
     <a-box position="-1 1.5 -3" rotation="0 45 0" color="#4CC3D9"
        event-set__enter="_event: mouseenter; color: #8FF7FF"
