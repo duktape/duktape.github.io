@@ -8,6 +8,7 @@
 		<img id="sky" src="images/stars.jpg" crossorigin="anonymous" />
         <img id="dusty_lake" src="images/dusty_lake.jpg" crossorigin="anonymous" />
         <img id="old_church" src="images/old_church.jpg" crossorigin="anonymous" />
+        <img id="whisky_room" src="images/whisky_room.jpg" crossorigin="anonymous" />
 		<img id="grass" src="images/grass.jpg" crossorigin="anonymous" />
 		<img id="crate" src="images/crate.jpg" crossorigin="anonymous" />
 		<img id="earth" src="images/earth-sphere.jpg" crossorigin="anonymous" />
@@ -16,58 +17,33 @@
 		
 	<a-sky 
 		color = "#FFFFFF"
-		material = "src: #dusty_lake">
+		material = "src: #sky">
 	</a-sky>
-
-	<a-plane
-		width="100" height="100"
-		position=" 0.00 0.00 0.00" 
-		rotation="-90 0 0" 
-		color="#888888" 
-		material="src: #grass; repeat:10 10; transparent: true; opacity: 0.75"
-		shadow="cast: false; receive: true">
-	</a-plane>
-	
-	<a-box
-		id="cratebox"
-        width = "1" height = "1" depth = "1"
-		position = "-1 0.5 -3"
-		rotation = "0 45 0"  
-		color = "#FFFFFF"
-		material = "src: #crate"
-		shadow = "cast: true; receive: true">
-	</a-box>
-	
-	<a-sphere
-		radius = "1.25"
-		position = "0 1.25 -5"
-		material = "src: #earth;"
-		shadow = "cast: true; receive: true"
-        event-set__down="_event: mouseenter; material.wireframe: true"
-        event-set__leave="_event: mouseleave; material.wireframe: false">
-	</a-sphere>
-	
-	<a-cylinder
-		radius = "0.5" height = "1.5"
-		position = " 1 0.75 -3"
-		color = "#8888BB"
-		material = "src: #hexagons; repeat: 4 2;"
-		shadow = "cast: true; receive: true"
-        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #old_church"
-        event-set__leave="_event: mouseleave; _target: a-sky; material.src: #dusty_lake"        >
-	</a-cylinder>
-    <a-box position="-1 1.5 -3" rotation="0 45 0" color="#4CC3D9"
-       event-set__enter="_event: mouseenter; color: #8FF7FF"
-       event-set__leave="_event: mouseleave; color: #4CC3D9">
-    </a-box>
-    <a-cylinder position="2 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"
-                event-set__enter="_event: mouseenter; _target: #cratebox; visible: true"
-                event-set__leave="_event: mouseleave; _target: #cratebox; visible: false">
-        <a-text id="cylinderText" value="This is a cylinder" align="center" color="#FFF" visible="false" position="0 -0.55 0.55"
-              geometry="primitive: plane; width: 1.75" material="color: #333"></a-text>
-    </a-cylinder>  
-        
-        
+    
+      <a-box
+        position="-2 2 -2"
+        scale=".2 .2 .2"     
+        rotation="0 45 0"
+        value="Nine O'Clock"
+        align="center"
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #old_church"      
+      ></a-box>  
+     <a-box
+        position="2 2 -2"
+        scale=".2 .2 .2" 
+        rotation="0 -45 0"
+        value="Three O'Clock"
+        align="center"
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #dusty_lake"      
+      ></a-box>  
+             <a-box
+        position="0 2 2.5"
+        scale=".2 .2 .2" 
+        rotation="0 180 0"
+        value="Six O'Clock"
+        align="center"
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #whisky_room"              
+      ></a-box> 
     <a-camera>
         <a-cursor></a-cursor>
     </a-camera>
