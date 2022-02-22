@@ -10,11 +10,11 @@
     <a-scene antialias="true">
 	
 	<a-assets>
-		<img id="sky" src="images/stars.jpg" crossorigin="anonymous" />
-       	 	<img id="dusty_lake" src="images/dusty_lake.jpg" crossorigin="anonymous" />
-       		<img id="old_church" src="images/street.jpeg" crossorigin="anonymous" />
-       	 	<img id="marriot" src="images/marriot.jpg" crossorigin="anonymous" />
-        	<img id="whisky_room" src="images/whisky_room.jpg" crossorigin="anonymous" />
+		<img id="sky" src="images/sky.jpg" crossorigin="anonymous" />
+       	 	<img id="street" src="images/street.jpg" crossorigin="anonymous" />
+       		<img id="rainbow" src="images/rainbow.jpeg" crossorigin="anonymous" />
+       	 	<img id="tree" src="images/tree.jpg" crossorigin="anonymous" />
+        	<img id="river" src="images/river.jpg" crossorigin="anonymous" />
 	</a-assets>
 		
 	<a-sky 
@@ -28,7 +28,7 @@
         rotation="0 45 0"
         value="Nine O'Clock"
         align="center"
-        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #old_church"      
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #street"      
       ></a-box>  
      <a-box
         position="2 2 -2"
@@ -36,7 +36,7 @@
         rotation="0 -45 0"
         value="Three O'Clock"
         align="center"
-        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #dusty_lake"      
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #rainbow"      
       ></a-box>  
      <a-box
         position="0 2 2.5"
@@ -44,7 +44,7 @@
         rotation="0 180 0"
         value="Six O'Clock"
         align="center"
-        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #whisky_room"     
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #tree"     
       ></a-box> 
      <a-box
         position="2 2 2.5"
@@ -52,7 +52,7 @@
         rotation="0 180 0"
         value="Six O'Clock"
         align="center"
-        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #marriot"     
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #river"     
       ></a-box> 
     <a-camera>
         <a-cursor color=#ff77ff></a-cursor>
